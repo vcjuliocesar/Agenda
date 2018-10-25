@@ -21,12 +21,11 @@ class Users extends DatabaseModel {
         $this->get_results_from_query();
       }
 
-      if(count($this->rows) == 1) {
-        foreach($this->rows[0] as $propiedad => $valor) {
-          $this->$propiedad = $valor;
+      if(isset($this->rows[0][0]) && is_array($this->rows[0][0])) {
+        foreach($this->rows[0][0] as $propiedad => $valor) {
+          $this->{$propiedad} = $valor;
         }
       }
-      //print_r($this->$propiedad);
     }
 
     public function set($user_data = array())

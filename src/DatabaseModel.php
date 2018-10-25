@@ -6,7 +6,7 @@ use PDO;
 abstract class DatabaseModel extends PDO {
   private static $db_host = 'localhost';
   private static $db_user = 'root';
-  private static $db_pass = 'yourpass';
+  private static $db_pass = 'julio-dev';
   protected $db_name = 'mysql';
   protected $query;
   protected $rows = array();
@@ -27,7 +27,7 @@ abstract class DatabaseModel extends PDO {
     try{
       $this->conn = new PDO("mysql:host=".self::$db_host.";dbname=".$this->db_name."",self::$db_user,self::$db_pass);
       $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      echo "Connected successfully";
+      //echo "Connected successfully\n";
     }catch(PDOException $e){
       echo "Connection failed: ".$e->getMessage();
     }
