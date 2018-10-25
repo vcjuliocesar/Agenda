@@ -1,0 +1,17 @@
+{
+    "name": "juliocastaneda/agenda",
+    "description": "OOP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "julio cesar valadez castañeda",
+            "email": "vcjuliocesar@outlook.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Agenda\\": "src/"
+      }
+    }
+}
